@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function  VerifyMobile(){
+            var mobile=document.getElementById('mobile').value;
+            if(mobile==='1234567891'){
+                document.getElementById('cvv').disabled=false;
+            }    
+        }
+        function VerifyCvv(){
+            var cvv=document.getElementById('cvv').value;
+            if(cvv==='1234'){
+                document.getElementById('state').disabled=false; 
+            }
+        }
+        function VerifyState(){
+            var state=document.getElementById('state').value;
+            if(state==="Delhi"){
+                document.getElementById('btn').disabled=false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Online Payment</legend>
+        <dl>
+            <dt>Mobile Number</dt>
+            <dd><input onblur="VerifyMobile()" id="mobile" type="text"></dd>
+            <dt>Cvv</dt>
+            <dd><input type="number"  max="4" id="cvv" onblur="VerifyCvv()" disabled></dd>
+            <dt>State</dt>
+            <dd>
+                <select disabled id="state" onblur="VerifyState()">
+                    <option>select</option>
+                    <option>Bhubanswer</option>
+                    <option>Delhi</option>
+                    <option>Hyderabad</option>
+                    <option>Bangolor</option>
+                </select>
+            </dd>
+        </dl>
+        <button  id="btn" disabled>Pay</button>
+    </fieldset>
+</body>
+</html>

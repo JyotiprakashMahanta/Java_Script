@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <script type="text/javascript">
+
+    </script>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body class="container-fluid">
+    <div class="bg-warning-subtle p-2 m-3">
+        <div class="row">
+            <img class="col-1" src="../public/Image/BMI.svg" alt="BMI Calculater" height="100" width="150">
+            <div class="col-2 text-danger mt-4">
+                <h4><b>BMI Calculator </b><br>
+                    <h5>Body Mass Index</h5>
+                </h4>
+            </div>
+        </div>
+        <div class="row bg-white mt-3 p-4">
+            <div class="col">
+                <div class="row">
+                    <div class="col">Gender <br>
+                        <button onclick="male()" id="male">Male</button>
+                        <button onclick="female()" id="female">Female</button>
+                    </div>
+                    <div class="col">Age<br>
+                        <input type="text" class="text-end" placeholder="years">&nbsp;<i
+                            style="size: 8px; color: gray;">between 3 yrs to 120 yrs</i>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col"> Height <br>
+                        <input type="text" placeholder="FT"> <input type="text" placeholder="IN">
+                    </div>
+                    <div class="col"> Weight <br>
+                        <input type="text" placeholder="in kgs">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 text-center">
+                <button class=" rounded">Calculate</button>
+            </div>
+       </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function VerifyUserName(){
+            var username=document.getElementById("UserName").value;
+            var ErrorUser=document.getElementById("lblError");
+            if(username.length==0){
+                ErrorUser.innerHTML="name shoud't be exert 4 letter".fontcolor('red');
+            }else{
+                ErrorUser.innerHTML="";
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name:</dt>
+        <dd><input type="text" onblur="VerifyUserName()" id="UserName"></dd>
+        <dd id="lblError"></dd>
+    </dl>
+</body>
+</html>
