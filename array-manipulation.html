@@ -1,0 +1,20 @@
+<script>
+    var categries=["Book","Sucess","Hard-Work","Concentration"];
+    document.write(categries.toString()+"<br>");
+    document.write(categries.join('-->'));
+    categries.map(function(item){
+        document.write(`<h3>${item}</h3>`);
+    })
+    categries.forEach(function(item,index){
+        document.write(`[${index}]:${item}<br>`);
+    })
+    var number=[12,23,34,45,65];
+    var result=number.filter(function(item){
+        return item>=14;
+    }).join("/");
+    document.write(result);
+    var item=[9100,8200,7300];
+    for(var ltes in item){
+        document.write(`${ltes}:${item[ltes]}<br>`);
+    }
+</script>

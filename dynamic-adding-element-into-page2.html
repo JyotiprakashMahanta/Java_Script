@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Addlistitems(){
+            var ol=document.createElement("ol");
+            ol.type="a"; 
+            ol.start="5";
+           // ol.reversed;
+            var li1=document.createElement("li");
+            li1.innerText="Jyoti";
+            var li2=document.createElement("li");
+            li2.innerHTML="Now time to work hard";
+            ol.appendChild(li1);
+            ol.appendChild(li2);
+            document.getElementById("container").appendChild(ol);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="Addlistitems()">Add list items</button>
+    <br><br>
+    <div id="container">
+
+    </div>
+</body>
+</html>
