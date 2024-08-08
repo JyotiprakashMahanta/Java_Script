@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function TableClick(){
+        var table=document.createElement("table");
+        table.border="1";
+        table.width="100%";
+        var thead=document.createElement("thead");
+        var thead_tr=document.createElement("tr");
+        var thead_th=document.createElement("th");
+        thead_th.innerHTML="Name";
+        thead.appendChild(thead_tr);
+        thead_tr.appendChild(thead_th);
+        var tbody=document.createElement("tbody");
+        var tbody_tr=document.createElement("tr");
+        var tbody_td=document.createElement("td");
+        tbody_td.innerHTML="Samsung TV";
+        tbody_tr.appendChild(tbody_td);
+        tbody.appendChild(tbody_td);
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        //document.appendChild(table);
+            document.getElementById("cointainer").appendChild(table);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="TableClick()">Click here to see table</button>
+    <div id="cointainer">
+
+    </div>
+</body>
+</html>
