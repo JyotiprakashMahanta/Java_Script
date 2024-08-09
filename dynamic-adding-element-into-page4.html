@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var emotion=["Jay","Sri","Ram"];
+        function Load(){
+
+            document.querySelector("ol").innerHTML="";
+            document.querySelector("select").innerHTML="";
+            document.querySelector("nav").innerHTML="";
+
+            emotion.map(function(ok){
+                var ol=document.createElement("li");
+                ol.innerHTML=ok;
+
+                document.querySelector("ol").appendChild(ol);
+
+                var opt=document.createElement("option");
+                opt.text=ok;
+                opt.value=ok;
+
+                document.querySelector("select").appendChild(opt);
+
+                var link=document.createElement("a");
+                link.href="#";
+                link.text=ok;
+                link.style.marginRight="30px";
+
+                document.querySelector("nav").appendChild(link);
+            })
+        }
+    </script>
+</head>
+<body>
+    <button onclick="Load()">Load Button</button>
+    <br> <br>
+    <ol>
+
+    </ol>
+    <br> <br>
+    <select>
+
+    </select>
+    <br> <br>
+    <nav>
+
+    </nav>
+</body>
+</html>
