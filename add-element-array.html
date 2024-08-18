@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Load(){
+            var cat=["Jay","Sri","Ram"];
+            document.querySelector("ol").innerHTML="";
+            cat.push("Hanuman");
+            cat.unshift("Strome");
+            cat.splice(2,0,"Har","Har","Mahadev");
+            cat.map(function(ok){
+                var li=document.createElement("li");
+                li.innerHTML=ok;
+                document.querySelector("ol").appendChild(li);
+            })
+        }
+    </script>
+</head>
+<body>
+    <button onclick="Load()">Click Here</button>
+    <ol>
+
+    </ol>
+</body>
+</html>
