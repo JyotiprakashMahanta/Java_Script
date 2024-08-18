@@ -11,6 +11,7 @@
             document.querySelector("ol").innerHTML="";
             document.querySelector("select").innerHTML="";
             document.querySelector("nav").innerHTML="";
+            document.querySelector("ul").innerHTML="";
 
             emotion.map(function(ok){
                 var ol=document.createElement("li");
@@ -30,6 +31,16 @@
                 link.style.marginRight="30px";
 
                 document.querySelector("nav").appendChild(link);
+
+                var UlLi=document.createElement("li");
+                var input=document.createElement("input");
+                input.type="checkbox";
+                var label=document.createElement("label");
+                label.innerHTML=emotion;
+
+                UlLi.appendChild(input);
+                UlLi.appendChild(label);
+                document.querySelector("ul").appendChild(UlLi);
             })
         }
     </script>
@@ -48,5 +59,9 @@
     <nav>
 
     </nav>
+    <br><br>
+    <ul style="list-style: none;">
+
+    </ul>
 </body>
 </html>
